@@ -1,0 +1,279 @@
+/* General Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #eaf3fa, #ffffff); /* Subtle gradient background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Ensure it takes the full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;  /* Added padding to give it some space */
+    background-color: #2b3d80;
+    width: 100%;  /* Ensure the header is 100% of the container width */
+    box-sizing: border-box;  /* Ensure padding is included in width calculation */
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add subtle depth */
+}
+
+.header .back-btn {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #4563ad;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header .back-btn:hover {
+    background-color: #334EAC;
+    transform: scale(1.05); /* Add a slight zoom effect */
+}
+
+/* FullCalendar Container Styling */
+#calendar {
+    flex: 1; /* Allow the calendar to take available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #fef9f0; /* Softer beige background */
+    border: 1px solid #e0d8c5; /* Subtle border for definition */
+    border-radius: 12px; /* Rounded corners for a clean look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhance shadow for depth */
+    padding: 20px;
+    margin-top: 20px; /* Add margin from the header */
+    height: 100%; /* Ensure the calendar fills available height */
+    overflow: auto; /* Allow scrolling when content overflows */
+}
+
+/* FullCalendar Specific Adjustments */
+.fc {
+    margin: 0 auto; /* Center the calendar */
+}
+
+/* FullCalendar Enhancements */
+.fc-toolbar {
+    margin-bottom: 10px;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #334EAC;
+}
+
+.fc-button {
+    background-color: #567C8D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fc-button:hover {
+    background-color: #334EAC;
+    transform: scale(1.05);
+}
+
+.fc-daygrid-day {
+    background-color: #fef9f0; /* Match beige container background */
+    border: 1px solid #f0e6d6;
+}
+
+.fc-daygrid-day:hover {
+    background-color: #f4ebdc;
+    cursor: pointer;
+}
+
+/* Today's Highlight */
+.fc-today {
+    background-color: rgba(255, 244, 214, 0.8); /* Light yellow highlight for today */
+}
+
+/* Event Styling */
+.fc-event {
+    background-color: #4563ad; /* Stronger blue for better contrast */
+    color: white;
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 0.9rem;
+}
+
+.fc-event:hover {
+    background-color: #334EAC;
+    cursor: pointer;
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Box Styling */
+.modal-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.modal-box button {
+    background-color: #567C8D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.modal-box button:hover {
+    background-color: #334EAC;
+    transform: scale(1.05);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Box */
+  .modal-box {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal-title {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #334EAC;
+  }
+  
+  /* Timer Modal Inputs */
+  .timer-input {
+    width: 30%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+  }
+  
+  .timer-input:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Confirm Button */
+  .confirm-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #334EAC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Modal Actions */
+  .modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .start-session-btn {
+    background-color: #334EAC;
+    color: #FFF;
+  }
+  
+  .mark-completed-btn {
+    background-color: #4CAF50;
+    color: #FFF;
+  }
+  
+  .delete-btn {
+    background-color: #F44336;
+    color: #FFF;
+  }
+  
+  /* Context Menu */
+  .context-menu {
+    position: absolute;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+  }
+  
+  .context-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .context-menu-list li {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .context-menu-list li:hover {
+    background-color: #f0f0f0;
+  }

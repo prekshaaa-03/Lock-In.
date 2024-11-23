@@ -1,0 +1,321 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5EFEB; /* Beige */
+  background-image: none; /* Explicitly remove any background image */
+  color: #2F4156; /* Navy */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Header */
+.dashboard-header {
+  width: 100%;
+  background-color: #2F4156; /* Navy */
+  color: #F5EFEB; /* Beige */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enable scrolling for the dashboard page */
+.dashboard {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top: 0.2rem; /* Adjust for fixed header */
+}
+
+.dashboard::-webkit-scrollbar {
+  width: 10px; /* Width of scrollbar */
+}
+
+.dashboard::-webkit-scrollbar-thumb {
+  background: #567C8D; /* Teal */
+  border-radius: 8px;
+}
+
+.dashboard::-webkit-scrollbar-track {
+  background: #F5EFEB; /* Beige */
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links button {
+  background: none;
+  color: #F5EFEB; /* Beige */
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-right: 2rem;
+  transition: color 0.3s, transform 0.2s;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.nav-links button:hover {
+  color: #FFFFFF; /* White */
+  transform: translateY(-2px);
+  background-color: #567C8D; /* Teal */
+}
+
+/* Profile Dropdown */
+.profile {
+  position: relative;
+}
+
+.profile button {
+  background: none;
+  color: #F5EFEB; /* Beige */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  transition: color 0.3s, transform 0.2s;
+  border-radius: 6px;
+}
+
+.profile button:hover {
+  color: #FFFFFF; /* White */
+  background-color: #567C8D; /* Teal */
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #FFFFFF; /* White */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  width: 180px;
+  animation: dropdown 0.3s ease;
+}
+
+.profile-menu button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2F4156; /* Navy */
+  transition: background 0.3s, color 0.3s;
+}
+
+.profile-menu button:hover {
+  background-color: #C8D9E6; /* Sky Blue */
+  color: #567C8D; /* Teal */
+}
+
+/* Main Content Sections (Calendar, Library, Study Plan) Adjustments */
+.content-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Reduced gap between sections */
+  margin-top: 8rem; /* Adjusted margin */
+  padding: 2rem;
+  padding-top: 4rem; /* Reduced padding */
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content {
+  position: relative;
+  background: linear-gradient(145deg, #BAD6EB, #C8D9E6); /* Gradient */
+  border-radius: 15px; /* Reduced border-radius */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Reduced box shadow */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px; /* Reduced height */
+  width: 90%; /* Adjusted width */
+  text-align: center;
+  padding: 1.5rem; /* Reduced padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.section-content h2 {
+  font-size: 2.2rem; /* Reduced font size */
+  color: #2F4156; /* Navy */
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-content p {
+  font-size: 1rem; /* Reduced font size */
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.section-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #C8D9E6, #BAD6EB); /* Reverse Gradient */
+}
+
+.section-content img {
+  width: 80%; /* Reduced width */
+  height: auto;
+  max-height: 280px; /* Reduced height */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section-content img:hover {
+  transform: scale(1.05);
+}
+/* Study Session Section */
+/* Study Session Section */
+/* Study Session Section */
+#study-session {
+  background: #BAD6EB; /* Light Blue */
+  border-radius: 12px; /* Slightly reduced roundness */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  padding: 1.5rem; /* Moderate padding */
+  width: 100%;
+  max-width: 450px; /* Compact but not cramped */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#study-session h2 {
+  font-size: 1.6rem; /* Slightly smaller */
+  font-weight: 600;
+  color: #2F4156; /* Navy */
+  margin-bottom: 0.8rem; /* Reduced space below heading */
+}
+
+#study-session p {
+  font-size: 0.95rem; /* Slightly smaller text */
+  color: #2F4156; /* Navy */
+  margin-bottom: 1rem; /* Compact spacing */
+  line-height: 1.4; /* Slightly tighter line spacing */
+  max-width: 85%; /* Slightly narrower text block */
+}
+
+.study-session-content {
+  width: 100%; /* Full width of container */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Reduced spacing between elements */
+  align-items: center;
+}
+
+.study-session-content label {
+  font-size: 0.9rem; /* Slightly smaller labels */
+  color: #2F4156; /* Navy */
+  text-align: left;
+  width: 100%; /* Align label with inputs */
+}
+
+.study-session-content input,
+.study-session-content select {
+  padding: 0.7rem; /* Reduced padding */
+  border: 1px solid #C8D9E6; /* Sky Blue */
+  border-radius: 6px; /* Slightly reduced roundness */
+  font-size: 0.95rem; /* Compact input font */
+  color: #2F4156; /* Navy */
+  width: 100%; /* Full width of the input/select */
+}
+
+#startSessionBtn {
+  background-color: #2F4156; /* Navy */
+  color: #F5EFEB; /* Beige */
+  padding: 0.7rem 1.2rem; /* Reduced padding */
+  font-size: 0.95rem; /* Compact button font */
+  font-weight: 600;
+  border: none;
+  border-radius: 6px; /* Reduced roundness */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startSessionBtn:hover {
+  background-color: #567C8D; /* Teal */
+  transform: translateY(-1px); /* Subtle motion */
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  background-color: #567C8D; /* Teal */
+  color: #F5EFEB; /* Beige */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-btn:hover {
+  background-color: #2F4156; /* Navy on hover */
+  transform: translateY(-2px); /* Subtle hover lift */
+}
+
+.logout-btn:focus {
+  outline: none;
+}
+
+/* Optional: Add a subtle icon next to the text (optional for more visual appeal) */
+.logout-btn .icon {
+  margin-right: 8px;
+  font-size: 1.2rem; /* Icon size */
+}
+
+
+
+/* Dropdown Animation */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

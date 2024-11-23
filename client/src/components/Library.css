@@ -1,0 +1,142 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f2eb; /* Beige */
+    color: #2f4156; /* Navy */
+  }
+  
+  .library-container {
+    padding: 50px 30px;
+    max-width: 95%;
+    width: 1200px;
+    height: auto;
+    background-color: #ffffff; /* White */
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    margin: 20px;  /* Added margin to avoid container sticking to the edges */
+  }
+  
+  .library-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2f4156; /* Navy */
+    text-align: center;
+  }
+  
+  .library-description {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #567c8d; /* Teal */
+    text-align: center;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .book-card {
+    background-color: #c8d9e6; /* Sky Blue */
+    border: 1px solid #567c8d; /* Teal */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-card a {
+    text-decoration: none;
+    color: #2f4156; /* Navy */
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+  }
+  
+  .book-card a:hover {
+    color: #081f5c; /* Galaxy */
+  }
+  
+  .book-description {
+    font-size: 1.1rem;
+    color: #2f4156; /* Navy */
+    margin-top: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .library-container {
+      padding: 30px 20px; /* Smaller padding for smaller screens */
+    }
+  
+    .library-title {
+      font-size: 2.5rem;  /* Slightly smaller title */
+    }
+  
+    .library-description {
+      font-size: 1.1rem;  /* Slightly smaller description */
+    }
+  
+    .book-grid {
+      gap: 20px;  /* Reduce gap for smaller screens */
+    }
+  
+    .book-card {
+      padding: 20px; /* Slightly smaller padding in the book card */
+    }
+  
+    .book-card a {
+      font-size: 1.3rem;  /* Smaller font size for links */
+    }
+  
+    .book-description {
+      font-size: 1rem;  /* Smaller description font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .library-title {
+      font-size: 2rem;  /* Further reduce title size */
+    }
+  
+    .library-description {
+      font-size: 1rem;  /* Further reduce description size */
+    }
+  
+    .book-grid {
+      gap: 15px;  /* Even smaller gap */
+    }
+  
+    .book-card {
+      padding: 15px; /* Even smaller padding */
+    }
+  
+    .book-card a {
+      font-size: 1.2rem;  /* Adjust for smaller screens */
+    }
+  
+    .book-description {
+      font-size: 0.9rem;  /* Adjust for smaller screens */
+    }
+  }
+  

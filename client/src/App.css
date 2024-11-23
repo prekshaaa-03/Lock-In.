@@ -1,0 +1,102 @@
+/* Reset and set up full viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background: url('background.jpg') center center/cover no-repeat;
+  background-color: #F2E9E4;
+}
+
+/* Main login form container styling */
+.login-container {
+  background: rgba(242, 233, 228, 0.9); /* Light color with transparency */
+  border-radius: 15px;
+  padding: 2em;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form title styling */
+.login-container h1 {
+  font-size: 1.8em;
+  color: #22223B; /* Dark blue */
+  margin-bottom: 1em;
+  font-weight: bold;
+  position: relative;
+}
+
+.login-container h1::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #4A4E69; /* Slightly lighter dark color */
+  display: block;
+  margin: 0.3em auto;
+  border-radius: 2px;
+}
+
+/* Styled input fields */
+.login-container input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #C9ADA7; /* Light pinkish gray */
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #9A8C98; /* Muted purple */
+  box-shadow: 0 0 8px rgba(154, 140, 152, 0.3);
+  outline: none;
+}
+
+/* Button styling */
+.login-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(to right, #4A4E69, #22223B); /* Dark gradient */
+  color: #F2E9E4; /* Light color for text */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-container button:hover {
+  background: linear-gradient(to right, #22223B, #4A4E69);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Toggle option for login/signup */
+.toggle-option {
+  margin-top: 20px;
+  color: #22223B; /* Dark blue */
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.toggle-option:hover {
+  color: #9A8C98; /* Muted purple */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

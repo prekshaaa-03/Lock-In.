@@ -1,0 +1,162 @@
+/* SplitScreen.css */
+.split-screen-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  height: 100vh;
+  width: 100vw; /* Ensure it takes full width */
+  font-family: 'Arial', sans-serif;
+  background-color: #F0F4F8;
+  overflow: hidden;
+}
+
+#timer {
+  position: fixed;
+  top: 10px;
+  left: auto;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #334EAC;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pdf-viewer,
+#notes-section {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+  transition: filter 0.5s ease; /* Smooth transition for blur effect */
+}
+
+#pdf-viewer {
+  background: #FFF9F0;
+  border-right: 1px solid #ccc;
+}
+
+#notes-section {
+  background: #F7F2EB;
+}
+
+#file-input-container {
+  margin-bottom: 25px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#file-input-container label {
+  font-size: 18px;
+  color: #334EAC;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+#file-input-container input[type="file"] {
+  font-size: 14px;
+  padding: 12px;
+  background-color: #D0E3FF;
+  border: 2px solid #334EAC;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#file-input-container input[type="file"]:hover {
+  background-color: #BAD6EB;
+  border-color: #081F5C;
+}
+
+#notes-toolbar {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: #334EAC;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#notes-toolbar button {
+  background-color: #567C8D;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#notes-toolbar button:hover {
+  background-color: #081F5C;
+}
+
+.editable-content {
+  width: 100%;
+  height: calc(100% - 40px); /* Adjust to take full height of the container */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  background-color: #FFFFFF;
+}
+
+.editable-content:focus {
+  border-color: #334EAC;
+  box-shadow: 0 0 8px rgba(51, 78, 172, 0.5);
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semitransparent overlay */
+  z-index: 999; /* Above all other elements */
+}
+
+#end-options {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#end-options button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #334EAC;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#end-options button:hover {
+  background-color: #081F5C;
+}
+
+.blur {
+  filter: blur(5px); /* Apply blur effect */
+}

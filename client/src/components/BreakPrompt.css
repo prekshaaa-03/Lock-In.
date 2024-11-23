@@ -1,0 +1,200 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F5EFEB, #D0E3FF); /* Beige gradient */
+    height: 100vh;
+    color: #2F4156; /* Navy text for contrast */
+    overflow: hidden;
+  }
+  
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #2F4156;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 1.5rem;
+  }
+  
+  /* Flashcard and container styling */
+  .flashcard-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.2rem;
+  }
+  
+  .flashcard {
+    width: 480px;
+    max-width: 90%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #567C8D;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #F5EFEB;
+    padding: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+  }
+  
+  .flashcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Arrow styling as buttons */
+  .arrow {
+    font-size: 2.5rem;
+    color: #2F4156;
+    background-color: #F5EFEB;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .arrow:hover {
+    background-color: #D0E3FF;
+    transform: scale(1.1);
+  }
+  
+  /* Header */
+  .dashboard-header {
+    width: 100%;
+    background-color: #2F4156;
+    color: #F5EFEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links button {
+    background: none;
+    color: #F5EFEB;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    transition: color 0.3s, transform 0.2s;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+  
+  .nav-links button:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    background-color: #567C8D;
+  }
+  
+  /* Profile Dropdown */
+  .profile {
+    position: relative;
+  }
+  
+  .profile button {
+    background: none;
+    color: #F5EFEB;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    transition: color 0.3s, transform 0.2s;
+    border-radius: 6px;
+  }
+  
+  .profile button:hover {
+    color: #FFFFFF;
+    background-color: #567C8D;
+  }
+  
+  .profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0.5rem;
+    width: 180px;
+    animation: dropdown 0.3s ease;
+  }
+  
+  .profile-menu button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #2F4156;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .profile-menu button:hover {
+    background-color: #C8D9E6;
+    color: #567C8D;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+  
+    .flashcard {
+      width: 350px;
+      height: 280px;
+      font-size: 1.1rem;
+    }
+  
+    .arrow {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+    }
+  }
+  
